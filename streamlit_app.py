@@ -8,4 +8,4 @@ with st.expander('Data'):
   st.write('**Raw Data')
 
   df = pd.read_csv('https://raw.githubusercontent.com/alexsbekele/data/main/penguins_cleaned%20(1).csv')
-  st.write(df.head())
+  df
