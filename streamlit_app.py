@@ -9,3 +9,9 @@ with st.expander('Data'):
 
   df = pd.read_csv('https://raw.githubusercontent.com/alexsbekele/data/main/penguins_cleaned%20(1).csv')
   df
+  st.write('**X**')
+  x = df.drop('species', axis = 1)
+  x
+  st.write('**Y**')
+  Y = df.species
+  Y
