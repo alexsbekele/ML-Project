@@ -41,21 +41,22 @@ with st.expander('Data Visualization'):
   input_df = pd.DataFrame(data, index = [0])
   input_penguins = pd.concat([input_df, x_row], axis = 0)
 #Encode x
-encode = ['island', 'sex']
-df_penguins = pd.get_dummies(input_penguins, prefix = encode)
-input_row = df_penguins[:1]
-
-#encode y
-target_mapper = {
-  'Adelie': 0,
-  'Chinstrap': 1,
-  'Gentoo': 2
-}
-def target_encode(val):
-  return target_mapper[val]
-y = y_row.apply(target_encode)
-y
-y_row
+with st.expander('Encoded'):
+  encode = ['island', 'sex']
+  df_penguins = pd.get_dummies(input_penguins, prefix = encode)
+  input_row = df_penguins[:1]
+  
+  #encode y
+  target_mapper = {
+    'Adelie': 0,
+    'Chinstrap': 1,
+    'Gentoo': 2
+  }
+  def target_encode(val):
+    return target_mapper[val]
+  y = y_row.apply(target_encode)
+  y
+  y_row
 with st.expander('Input Features'):
   st.write('**Input Penguin**')
   input_df
