@@ -51,8 +51,8 @@ target_mapper = {
   'Chinstrap': 1,
   'Gentoo': 2
 }
-def target_encode(value):
-  return target_mapper(value)
+def target_encode(val):
+  return target_mapper(val)
 y = y_row.apply(target_encode)
 y
 y_row
