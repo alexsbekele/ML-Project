@@ -20,7 +20,7 @@ with st.expander('Data Visualization'):
 
   
   #Data Preparation
-  with st.siderbar:
+  with st.sidebar:
     st.header('Input Features')
     island = st.selectbox('Island',('Biscoe', 'Dream', 'Torgersen') )
     gender = st.selectbox('Gender', ('male', 'female'))
